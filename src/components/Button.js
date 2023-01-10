@@ -12,5 +12,5 @@ export default function Button(props) {
     buttonClass += ' button--danger';
   }
 
-  return <button>{props.children}</button>;
+  return <button className={buttonClass}>{props.children}</button>;
 }
