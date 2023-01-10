@@ -1,7 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import "components/Button.scss";
+import 'components/Button.scss';
 
 export default function Button(props) {
-   return <></>;
+  let buttonClass = 'button';
+
+  if (props.confirm) {
+    buttonClass += ' button--confirm';
+  }
+
+  return <button>{props.children}</button>;
 }
