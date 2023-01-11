@@ -130,6 +130,11 @@ storiesOf('InterviewerList', module)
       onChange={action('setInterviewer')}
     />
   ));
+// .add("Clickable", () => (
+//   <InterviewerList
+//   interviewers={interviewers}
+//   avatar={interviewer.avatar}
+//   onChange={action("setInterviewer")}     />   ));
 
 storiesOf('Appointment', module)
   .addParameters({
