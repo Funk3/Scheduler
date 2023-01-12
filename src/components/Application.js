@@ -50,7 +50,7 @@ export default function Application(props) {
   useEffect(() => {
     const daysUrl = 'http://localhost:8001/api/days';
     axios.get(daysUrl).then((response) => {
-      console.log(response);
+      setDays(response.data);
     });
   }, []);
 
