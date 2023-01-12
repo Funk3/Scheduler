@@ -160,4 +160,20 @@ storiesOf('Appointment', module)
   .add('Status', () => <Status message='Deleting' />)
   .add('Error', () => (
     <Error message='Could not delete appoinment' onClose={action('onClose')} />
+  ))
+  .add('Create', () => (
+    <Form
+      student=''
+      interviewer='1'
+      interviewers='[1]'
+      onSave={action('onSave')}
+      onCancel={action('onCancel')}
+    />
+  ))
+  .add('Edit', () => (
+    <Form
+      interviewers='[]'
+      onSave={action('onSave')}
+      onCancel={action('onCancel')}
+    />
   ));
