@@ -12,3 +12,15 @@ export function getAppointmentsForDay(state, day) {
   });
   return matchIds(state.appointments, appointmentArray);
 }
+
+export function getInterview(state, interview) {
+  if (!interview) {
+    return null;
+  }
+
+  const interviewerInfo = state.interviewers[interview.interviewer];
+  return {
+    student: interview.student,
+    interviewer: interviewerInfo,
+  };
+}
