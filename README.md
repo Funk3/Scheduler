@@ -26,12 +26,12 @@ npm run storybook
 
 ## Main App screen
 
-https://github.com/Funk3/Scheduler/blob/master/docs/main_app.png
+!["Main application screen"](https://github.com/Funk3/Scheduler/blob/master/docs/main_app.png)
 
 ## Edit interview form
 
-https://github.com/Funk3/Scheduler/blob/master/docs/interview_edit.png
+!["Edit interview form"](https://github.com/Funk3/Scheduler/blob/master/docs/interview_edit.png)
 
 ## Delete interview form
 
-https://github.com/Funk3/Scheduler/blob/master/docs/interview_delete.png
+!["Delete interview form"](https://github.com/Funk3/Scheduler/blob/master/docs/interview_delete.png)
