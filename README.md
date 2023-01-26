@@ -4,6 +4,9 @@
 
 Install dependencies with `npm install`.
 
+Follow instructions [here](https://github.com/lighthouse-labs/scheduler-api)
+It is the scheduler-api and will fill the scheduler app with the proper data to view as it was programmed.
+
 ## Running Webpack Development Server
 
 ```sh
