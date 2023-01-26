@@ -12,34 +12,32 @@ export default function useApplicationData() {
       ...state.appointments[id],
       interview: { ...interview },
     };
-
+    // eslint-disable-next-line
     const appointments = {
       ...state.appointments,
       [id]: appointment,
     };
 
     dispatch({ type: SET_INTERVIEW, id: id, interview: interview });
-    return axios.put(`http://localhost:8001/api/appointments/${id}`, {
+    return axios.put(`/api/appointments/${id}`, {
       interview,
     });
   }
 
   function cancelInterview(id) {
-    return axios
-      .delete(`http://localhost:8001/api/appointments/${id}`)
-      .then(() => {
-        const nullAppointment = {
-          ...state.appointments[id],
-          interview: null,
-        };
+    return axios.delete(`/api/appointments/${id}`).then(() => {
+      const nullAppointment = {
+        ...state.appointments[id],
+        interview: null,
+      };
+      // eslint-disable-next-line
+      const appointments = {
+        ...state.appointments,
+        [id]: nullAppointment,
+      };
 
-        const appointments = {
-          ...state.appointments,
-          [id]: nullAppointment,
-        };
-
-        dispatch({ type: SET_INTERVIEW, id: id, interview: null });
-      });
+      dispatch({ type: SET_INTERVIEW, id: id, interview: null });
+    });
   }
 
   const [state, dispatch] = useReducer(reducer, {
@@ -54,9 +52,9 @@ export default function useApplicationData() {
   // Calls to Server
   useEffect(() => {
     Promise.all([
-      axios.get('http://localhost:8001/api/days'),
-      axios.get('http://localhost:8001/api/appointments'),
-      axios.get('http://localhost:8001/api/interviewers'),
+      axios.get('/api/days'),
+      axios.get('/api/appointments'),
+      axios.get('/api/interviewers'),
     ]).then((all) => {
       dispatch({
         type: SET_APPLICATION_DATA,
