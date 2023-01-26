@@ -21,3 +21,17 @@ npm test
 ```sh
 npm run storybook
 ```
+
+## Screenshots
+
+## Main App screen
+
+https://github.com/Funk3/Scheduler/blob/master/docs/main_app.png
+
+## Edit interview form
+
+https://github.com/Funk3/Scheduler/blob/master/docs/interview_edit.png
+
+## Delete interview form
+
+https://github.com/Funk3/Scheduler/blob/master/docs/interview_delete.png
