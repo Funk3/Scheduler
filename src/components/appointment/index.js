@@ -1,13 +1,13 @@
 import React from 'react';
-import Header from 'components/Appointment/Header';
-import Show from 'components/Appointment/Show';
-import Empty from 'components/Appointment/Empty';
-import Form from 'components/Appointment/Form';
 import useVisualMode from 'hooks/useVisualMode';
 import 'components/Appointment/styles.scss';
+import Header from './Header';
+import Show from './Show';
+import Empty from './Empty';
+import Form from './Form';
 import Status from './Status';
-import Confirm from 'components/Appointment/Confirm';
-import Error from 'components/Appointment/Error';
+import Confirm from './Confirm';
+import Error from './Error';
 
 export default function Appointment(props) {
   // Transition Views
