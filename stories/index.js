@@ -11,7 +11,11 @@ import DayList from 'components/DayList';
 import InterviewerListItem from 'components/InterviewerListItem';
 import InterviewerList from 'components/InterviewerList';
 
+<<<<<<< HEAD
 import Appointment from 'components/Appointment/';
+=======
+import Appointment from 'components/Appointment';
+>>>>>>> 3553800b90af76718f4d78a21a18e314fab333c0
 import Header from 'components/Appointment/Header';
 import Empty from 'components/Appointment/Empty';
 import Show from 'components/Appointment/Show';
