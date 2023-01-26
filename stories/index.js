@@ -10,7 +10,7 @@ import DayListItem from 'components/DayListItem';
 import DayList from 'components/DayList';
 import InterviewerListItem from 'components/InterviewerListItem';
 import InterviewerList from 'components/InterviewerList';
-import Appointment from 'components/Appointment/index.js';
+import Appointment from 'components/Appointment/Index.js';
 import Header from 'components/Appointment/Header';
 import Empty from 'components/Appointment/Empty';
 import Show from 'components/Appointment/Show';
@@ -126,12 +126,12 @@ storiesOf('InterviewerList', module)
   })
   .add('Initial', () => <InterviewerList interviewers={interviewers} />)
   .add('Selected', () => (
-    <InterviewerList interviewers={interviewers} value={3} />
+    <InterviewerList interviewers={interviewers} interviewer={3} />
   ))
   .add('Clickable', () => (
     <InterviewerList
       interviewers={interviewers}
-      onChange={action('setInterviewer')}
+      setInterviewer={action('setInterviewer')}
     />
   ));
 
