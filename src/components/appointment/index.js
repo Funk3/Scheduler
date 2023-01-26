@@ -9,18 +9,18 @@ import Status from './Status';
 import Confirm from 'components/Appointment/Confirm';
 import Error from 'components/Appointment/Error';
 
-// Transition Views
-const EMPTY = 'EMPTY';
-const SHOW = 'SHOW';
-const CREATE = 'CREATE';
-const SAVING = 'SAVING';
-const DELETING = 'DELETING';
-const EDITING = 'EDITING';
-const CONFIRMING = 'CONFIRMING';
-const ERROR_SAVE = 'ERROR_SAVE';
-const ERROR_DELETE = 'ERROR_DELETE';
-
 export default function Appointment(props) {
+  // Transition Views
+  const EMPTY = 'EMPTY';
+  const SHOW = 'SHOW';
+  const CREATE = 'CREATE';
+  const SAVING = 'SAVING';
+  const DELETING = 'DELETING';
+  const EDITING = 'EDITING';
+  const CONFIRMING = 'CONFIRMING';
+  const ERROR_SAVE = 'ERROR_SAVE';
+  const ERROR_DELETE = 'ERROR_DELETE';
+
   // Save an appointment
   function save(name, interviewer) {
     transition(SAVING);
