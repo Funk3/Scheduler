@@ -4,7 +4,7 @@ export function getAppointmentsForDay(state, day) {
   if (!day || !validDays.includes(day)) return [];
 
   return state.days
-    .filter((appointment) => appointment.name === day)[0]
+    .find((appointment) => appointment.name === day)
     .appointments.map((apptId) => state.appointments[apptId]);
 }
 

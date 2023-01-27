@@ -23,7 +23,7 @@ import Application from 'components/Application';
 afterEach(cleanup);
 
 describe('Application', () => {
-  it.skip('defaults to Monday and changes the schedule when a new day is selected', () => {
+  it('defaults to Monday and changes the schedule when a new day is selected', () => {
     const { getByText } = render(<Application />);
 
     return waitForElement(() => getByText('Monday')).then(() => {
@@ -32,7 +32,7 @@ describe('Application', () => {
     });
   });
 
-  it.skip('loads data, cancels an interview and increases the spots remaining for Monday by 1', async () => {
+  it('loads data, cancels an interview and increases the spots remaining for Monday by 1', async () => {
     const { container } = render(<Application />);
 
     await waitForElement(() => getByText(container, 'Archie Cohen'));
