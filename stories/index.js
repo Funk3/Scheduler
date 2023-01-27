@@ -11,6 +11,7 @@ import DayList from 'components/DayList';
 import InterviewerListItem from 'components/InterviewerListItem';
 import InterviewerList from 'components/InterviewerList';
 
+import Appointment from 'components/Appointment';
 import Header from 'components/Appointment/Header';
 import Empty from 'components/Appointment/Empty';
 import Show from 'components/Appointment/Show';
@@ -135,12 +136,12 @@ storiesOf('InterviewerList', module)
     />
   ));
 
-storiesOf('a', module)
+storiesOf('Appointment', module)
   .addParameters({
     backgrounds: [{ name: 'white', value: '#fff', default: true }],
   })
-  .add('a', () => <a />)
-  .add('a with Time', () => <a time='12pm' />)
+  .add('Appointment', () => <Appointment />)
+  .add('Appointment with Time', () => <Appointment time='12pm' />)
   .add('Header', () => <Header time='12pm' />)
   .add('Empty', () => <Empty onAdd={action('onAdd')} />)
   .add('Show', () => (
@@ -153,7 +154,7 @@ storiesOf('a', module)
   ))
   .add('Confirm', () => (
     <Confirm
-      message='Delete the a?'
+      message='Delete the appointment?'
       onConfirm={action('onConfirm')}
       onCancel={action('onCancel')}
     />
@@ -178,19 +179,19 @@ storiesOf('a', module)
       onCancel={action('onCancel')}
     />
   ))
-  .add('a Empty', () => (
+  .add('Appointment Empty', () => (
     <Fragment>
-      <a id={1} time='4pm' />
-      <a time='5pm' />
+      <Appointment id={1} time='4pm' />
+      <Appointment time='5pm' />
     </Fragment>
   ))
-  .add('a Booked', () => (
+  .add('Appointment Booked', () => (
     <Fragment>
-      <a
+      <Appointment
         id={1}
         time='4pm'
         interview={{ student: 'Lydia Miller-Jones', interviewer }}
       />
-      <a time='5pm' />
+      <Appointment time='5pm' />
     </Fragment>
   ));
