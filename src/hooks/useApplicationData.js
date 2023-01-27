@@ -8,16 +8,6 @@ import reducer, {
 
 export default function useApplicationData() {
   function bookInterview(id, interview) {
-    const appointment = {
-      ...state.appointments[id],
-      interview: { ...interview },
-    };
-    // eslint-disable-next-line
-    const appointments = {
-      ...state.appointments,
-      [id]: appointment,
-    };
-
     dispatch({ type: SET_INTERVIEW, id: id, interview: interview });
     return axios.put(`/api/appointments/${id}`, {
       interview,
@@ -26,16 +16,6 @@ export default function useApplicationData() {
 
   function cancelInterview(id) {
     return axios.delete(`/api/appointments/${id}`).then(() => {
-      const nullAppointment = {
-        ...state.appointments[id],
-        interview: null,
-      };
-      // eslint-disable-next-line
-      const appointments = {
-        ...state.appointments,
-        [id]: nullAppointment,
-      };
-
       dispatch({ type: SET_INTERVIEW, id: id, interview: null });
     });
   }
