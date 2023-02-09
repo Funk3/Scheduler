@@ -8,10 +8,11 @@ import reducer, {
 
 export default function useApplicationData() {
   function bookInterview(id, interview) {
-    dispatch({ type: SET_INTERVIEW, id: id, interview: interview });
     return axios.put(`/api/appointments/${id}`, {
       interview,
-    });
+    }).then(() => {
+      dispatch({ type: SET_INTERVIEW, id: id, interview: interview })
+    })
   }
 
   function cancelInterview(id) {
