@@ -18,7 +18,7 @@ import {
   fireEvent,
 } from '@testing-library/react';
 
-import Application from 'components/Application';
+import Application from 'components/application';
 
 afterEach(cleanup);
 
