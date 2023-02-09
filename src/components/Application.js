@@ -7,7 +7,7 @@ import {
   getInterview,
   getInterviewersForDay,
 } from 'helpers/selectors.js';
-import 'components/application.scss';
+import 'components/Application.scss';
 
 export default function Application() {
   const { state, setDay, bookInterview, cancelInterview } =
